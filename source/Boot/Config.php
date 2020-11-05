@@ -16,7 +16,7 @@ define("CONF_URL_TEST", "http://localhost/json-php");
 /**
  * SITE
  */
-define("CONF_SITE_NAME", "JSON File ");
+define("CONF_SITE_NAME", "JSON FILE PHP ");
 define("CONF_SITE_TITLE", "Escola Nacional de Migração");
 define("CONF_SITE_DESC", "ENAM");
 define("CONF_SITE_LANG", "pt_AO");
