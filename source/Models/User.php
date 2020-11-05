@@ -7,7 +7,9 @@ namespace Source\Models;
 use Source\Core\Model;
 
 /**
- * Class User
+ * JSON-PHP | Class User
+ *
+ * @author Euclides Bernardo <euclidesquissembebernado@gmail.com>
  * @package Source\Models
  */
 class User extends Model
