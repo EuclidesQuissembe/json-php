@@ -1,0 +1,31 @@
+{
+  "name": "EuclidesQuissembe/json-php",
+  "description": "Generate json file with php",
+  "minimum-stability": "stable",
+  "license": [
+    "MIT"
+  ],
+  "authors": [
+    {
+      "name": "Euclides Bernardo",
+      "email": "euclidesquissembebernado@gmail.com",
+      "homepage": "https://github.com/EuclidesQuissembe",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Source\\": "source"
+    },
+    "files": [
+      "source/Boot/Config.php",
+      "source/Boot/Helpers.php"
+    ]
+  },
+  "require": {
+    "coffeecode/optimizer": ">=2.0.1",
+    "coffeecode/router": ">=1.0.7",
+    "coffeecode/paginator": ">=1.0.5",
+    "league/plates": ">=3.3.0"
+  }
+}
