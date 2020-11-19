@@ -53,7 +53,7 @@
             <!-- /.card-body -->
 
             <div class="card-footer text-right">
-                <button type="submit" class="btn btn-primary">Cadastrar</button>
+                <button type="submit" class="btn btn-primary create">Cadastrar</button>
             </div>
         </form>
     </div>

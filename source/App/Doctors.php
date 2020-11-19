@@ -36,7 +36,8 @@ class Doctors extends Controller
     {
         $speciality = (new Speciality())->findBySlug($data['specialitySlug']);
 
-        $doctorSpecialities = (new DoctorSpeciality())->find('speciality_id = :id', "id={$speciality->id}")->fetch(true);
+        $doctorSpecialities = (new DoctorSpeciality())->find('speciality_id = :id',
+            "id={$speciality->id}")->fetch(true);
 
         $doctors = $this->doctors($doctorSpecialities);
 
@@ -82,8 +83,7 @@ class Doctors extends Controller
 
             $this->create($data, $doctor->id);
 
-            (new Message())->success("Cobertura cadastrada com sucesso")->flash();
-            $json['redirect'] = url("/especialidades/{$speciality->slug}/atos-medicos");
+            $json['message'] = (new Message())->success("Cobertura cadastrada com sucesso")->render();
             echo json_encode($json);
             return;
         }
@@ -137,8 +137,7 @@ class Doctors extends Controller
 
             $this->create($data, $doctor->id);
 
-            (new Message())->success("Cobertura cadastrada com sucesso")->flash();
-            $json['redirect'] = url("/especialidades/coberturas/{$roof->slug}/atos-medicos");
+            $json['message'] = (new Message())->success("Cobertura cadastrada com sucesso")->render();
             echo json_encode($json);
             return;
         }
