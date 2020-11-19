@@ -5,7 +5,7 @@
 define("CONF_DB_HOST", "localhost");
 define("CONF_DB_USER", "root");
 define("CONF_DB_PASS", "");
-define("CONF_DB_NAME", "enam");
+define("CONF_DB_NAME", "json-php");
 
 /**
  * PROJECT URLs
@@ -60,7 +60,7 @@ define("CONF_PASSWD_OPTION", ["cost" => 10]);
  */
 define("CONF_VIEW_PATH", __DIR__ . "/../../themes/");
 define("CONF_VIEW_EXT", "php");
-define("CONF_VIEW_THEME", "chartsweb");
+define("CONF_VIEW_THEME", "web");
 define("CONF_VIEW_ADMIN", "admin");
 
 /**

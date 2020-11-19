@@ -377,17 +377,20 @@ abstract class Model
             $id = $this->id;
             $this->update($this->safe(), "id = :id", "id={$id}");
             if ($this->fail()) {
-//                $this->message->error("Houve um erro ao atualizar, por favor verifique os dados");
-                $this->message->error($this->fail());
+                $this->message->error("Houve um erro ao atualizar, por favor verifique os dados");
                 return false;
             }
         }
 
+
+
         /** Create */
         if (empty($this->id)) {
             $id = $this->create($this->safe());
+
             if ($this->fail()) {
-                $this->message->error("Houve um erro ao cadastrar, por favor verifique os dados");
+//                $this->message->error("Houve um erro ao cadastrar, por favor verifique os dados");
+                $this->message->error($this->fail());
                 return false;
             }
         }

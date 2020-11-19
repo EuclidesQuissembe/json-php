@@ -4,6 +4,7 @@
 namespace source\App;
 
 use Source\Core\Controller;
+use Source\Models\User;
 
 /**
  * JSON-PHP | Class Web
@@ -20,15 +21,15 @@ class Web extends Controller
 
     public function home(): void
     {
-        $head = $this->seo(
+        $head = $this->seo->render(
             CONF_SITE_NAME,
             CONF_SITE_DESC,
             url('/'),
             ''
         );
 
-        echo $this->view->render('widgets/home/index', [
-            'head' => $head
+        echo $this->view->render('widgets/home/home', [
+            'head' => 'Euclides'
         ]);
     }
 

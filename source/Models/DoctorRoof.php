@@ -16,6 +16,6 @@ class DoctorRoof extends \Source\Core\Model
      */
     public function __construct()
     {
-        parent::__construct('doctors_roofing', ['id'], ['speciality_id', 'doctor_id']);
+        parent::__construct('doctors_roofing', ['id'], ['roof_id', 'doctor_id']);
     }
 }

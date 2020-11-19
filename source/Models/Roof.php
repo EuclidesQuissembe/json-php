@@ -1,7 +1,7 @@
 <?php
 
 
-namespace source\Models;
+namespace Source\Models;
 
 use Source\Core\Model;
 
@@ -18,6 +18,16 @@ class Roof extends Model
      */
     public function __construct()
     {
-        parent::__construct('roofing', ['id'], ['speciality_id', 'name']);
+        parent::__construct('roofing', ['id'], ['slug', 'speciality_id', 'name']);
+    }
+
+    /**
+     * @param string $slug
+     * @param string $columns
+     * @return Roof|null
+     */
+    public function findBySlug(string $slug, string $columns = '*'): ?Roof
+    {
+        return $this->find('slug = :slug', "slug={$slug}", $columns)->fetch();
     }
 }

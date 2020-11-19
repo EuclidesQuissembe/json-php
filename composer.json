@@ -27,6 +27,7 @@
     "coffeecode/optimizer": ">=2.0.1",
     "coffeecode/router": ">=1.0.7",
     "coffeecode/paginator": ">=1.0.5",
-    "league/plates": ">=3.3.0"
+    "league/plates": ">=3.3.0",
+    "ext-json": "*"
   }
 }

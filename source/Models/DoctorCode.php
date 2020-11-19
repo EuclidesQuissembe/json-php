@@ -18,4 +18,14 @@ class DoctorCode extends \Source\Core\Model
     {
         parent::__construct('doctors_code', ['id'], ['doctor_id', 'code']);
     }
+
+    /**
+     * @param int $doctorId
+     * @param string $columns
+     * @return DoctorCode|null
+     */
+    public function findByDoctorId(int $doctorId, string $columns = '*'): ?DoctorCode
+    {
+        return $this->find('doctor_id = :id', "id={$doctorId}", $columns)->fetch();
+    }
 }
